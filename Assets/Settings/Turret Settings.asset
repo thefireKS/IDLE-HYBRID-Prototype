@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905e6638147d5d24caf095697055039c, type: 3}
+  m_Name: Turret Settings
+  m_EditorClassIdentifier: 
+  playerColor: {r: 0, g: 0.17257597, b: 0.8415094, a: 1}
+  enemyColor: {r: 1, g: 0, b: 0, a: 1}
+  playerMaterial: {fileID: 2100000, guid: 39a58fb2e5802c349b300e62606dbe84, type: 2}
+  enemyMaterial: {fileID: 2100000, guid: 6c1eccf2fa9c69c4e8c7b0d565afdd3c, type: 2}
+  playerParameters: {fileID: 11400000, guid: 0a4ffdac94cc4024799f060e61b1e97f, type: 2}
+  enemyParameters: {fileID: 11400000, guid: f199c13f6356fa442a4f5b8d8e6940b6, type: 2}
+  damage: 1
+  attackSpeed: 3
