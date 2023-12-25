@@ -19,6 +19,7 @@ public class TurretCapturing : MonoBehaviour
     private Color _captureColor;
     private Material _captureMaterial;
     public capturedBy _captureData = capturedBy.NOBODY;
+    private capturedBy _tempCaptureData = capturedBy.NOBODY;
 
     public enum capturedBy { NOBODY, PLAYER, ENEMY }
 
@@ -40,7 +41,7 @@ public class TurretCapturing : MonoBehaviour
             _captureTime = _turretParameters.playerParameters.captureTime;
             _captureColor = _turretParameters.playerColor;
             _captureMaterial = _turretParameters.playerMaterial;
-            _captureData = capturedBy.PLAYER;
+            _tempCaptureData = capturedBy.PLAYER;
         }
         else if (other.CompareTag("Enemy"))
         {
@@ -53,7 +54,7 @@ public class TurretCapturing : MonoBehaviour
             _captureTime = _turretParameters.enemyParameters.captureTime;
             _captureColor = _turretParameters.enemyColor;
             _captureMaterial = _turretParameters.enemyMaterial;
-            _captureData = capturedBy.ENEMY;
+            _tempCaptureData = capturedBy.ENEMY;
         }
         else
             return;
@@ -87,6 +88,7 @@ public class TurretCapturing : MonoBehaviour
             if (_currentCaptureTimer > _captureTime)
             {
                 _isCaptured = true;
+                _captureData = _tempCaptureData;
                 _turretBody.material = _captureMaterial;
                 _turretAttack.SetTurretTarget(_captureData);
             }
